@@ -92,20 +92,17 @@ body {
 
 .copy .intro{
   font-style: italic;
-  line-height: 110%;
+  line-height: 1.6;
   margin-top: 0.25rem;
-
 }
 
 .inline-label{
-  padding-inline: 0.25rem 0.5rem;
-  border-width: 1px;
-  border-style: solid;
-  color: rgba(0, 0, 0, 0.18);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
 }
 
 .inline-label.alt{
-  padding-inline: 0;
   border-style: dashed;
 }
 
@@ -125,26 +122,31 @@ body {
 .site-footer {
   text-align: center;
   padding: 1.25rem;
-  --card:
-  var(--muted)
+  background: var(--card);
+}
+
+.tagline {
+  color: var(--muted);
 }
 .bg-sample{
   width: 100%;
   min-height: 80px;
   padding: 0.75rem;
   margin-block: 0.75rem;
-  border-radius: 12;
+  border-radius: 12px;
   color: white;
   background: linear-gradient(135deg, var(--brand), #22c55e);
   
 }
 
-.color-demo, .color-note{
-  font-weight: bold;
+.color-demo .color-note{
+  color: var(--brand);
+  font-weight: 700;
 }
-.color-demo{
+
+.color-demo .muted{
+  color: var(--muted);
   font-size: 0.95rem;
-  color: var(--muted)
 }
 
 .container {
@@ -167,8 +169,44 @@ body {
 }
 
 .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem;
   border: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  background: var(--brand);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-dark);
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.product-grid .item {
+  flex: 1 1 140px;
+  min-width: 140px;
+  min-height: 90px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
 }
 
 .position-stage {
@@ -177,6 +215,13 @@ body {
   min-height: 260px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   overflow: hidden;
+}
+
+.static-box {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
 }
 
 .card {
