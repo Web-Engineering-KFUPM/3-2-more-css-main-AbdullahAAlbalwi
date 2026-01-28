@@ -43,7 +43,9 @@
 /* TODO 3:
    - Set the color to the brand variable and make the text bold for the .color-demo .color-note class.
    - Set the color to var(--muted) and the font size to 0.95rem for the .color-demo .muted class.
-   - Style the .bg-sample class: Make the width of 100%, set a minimum height of 80px, add padding 0.75 rem and margin-block 0.75 rem, round the corners using border-radius, set the text color to white, and apply a 135-degree linear gradient background starting from the brand color and ending with a green tone like linear-gradient(135deg, var(--brand), #22c55e).
+   - Style the .bg-sample class: Make the width of 100%, set a minimum height of 80px, add padding 0.75 rem and margin-block 0.75 rem, 
+   round the corners using border-radius, set the text color to white, and apply a 135-degree linear gradient 
+   background starting from the brand color and ending with a green tone like linear-gradient(135deg, var(--brand), #22c55e).
 */
 
 /* TODO 4:
@@ -82,16 +84,67 @@ body {
   color: #111827;
 }
 
+.copy .title{
+  font-size: 1rem;
+  font-weight: 650;
+  text-transform: capitalize;
+}
+
+.copy .intro{
+  font-style: italic;
+  line-height: 110%;
+  margin-top: 0.25rem;
+
+}
+
+.inline-label{
+  padding-inline: 0.25rem 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  color: rgba(0, 0, 0, 0.18);
+}
+
+.inline-label.alt{
+  padding-inline: 0;
+  border-style: dashed;
+}
+
 :root {
   --muted: #6b7280;        /* muted text */
   --bg: #f6f7fb;           /* page background */
   --card: #ffffff;         /* card/background surfaces */
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
 }
 
 .site-header,
 .site-footer {
   text-align: center;
   padding: 1.25rem;
+  --card:
+  var(--muted)
+}
+.bg-sample{
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  margin-block: 0.75rem;
+  border-radius: 12;
+  color: white;
+  background: linear-gradient(135deg, var(--brand), #22c55e);
+  
+}
+
+.color-demo, .color-note{
+  font-weight: bold;
+}
+.color-demo{
+  font-size: 0.95rem;
+  color: var(--muted)
 }
 
 .container {
